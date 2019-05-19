@@ -13,7 +13,6 @@ form textarea {
     background-color: #2b4a64;
 }
 
-form select:focus ,form input:focus, form textarea:focus {
+form select:focus ,form input:focus, form textarea: :focus {
     background-color: #4e708c;
-    border: #fff 1px solid;
 } 
