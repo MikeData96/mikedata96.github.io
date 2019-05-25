@@ -8,9 +8,36 @@ body {
     width: 300px;
     height: 300px;
     position: relative;
-} 
+}
 
-#green {
-    
+#green{
+    background-color: lightgreen;
+    width: 150px;
+    height: 150px;
+    /* position: relative;
+    right: 5px;
+    top: 5px; */
+}
 
+#circle {
+    background-color: red;
+    width: 150px;
+    height: 150px;  
+    border-radius: 50%;      
+}
+
+#beige {
+    background-color: beige;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+
+#blue {
+    background-color: blue;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
 }
