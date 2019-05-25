@@ -1,0 +1,25 @@
+#gallery {
+    width: 100%
+}
+
+figure {
+    width: 33%;
+}
+
+@media (max-width: 992px) {
+    figure {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    figure {
+        width: 100%
+    }
+}
+@media (max-width: 550px) {
+    body {
+        margin: 0;
+    }
+}
