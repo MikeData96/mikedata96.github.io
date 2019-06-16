@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formularz Pizza</title>
+    <title>Formularz zamówienia Pizzy</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <label for="name">Imię:</label>
-    <input type="text" name="name" id="name">
+    <form id="pizza-order" action="">
 
-    <br>
-    <label for="lastname">Nazwisko:</label>
-    <input type="text" name="lastname" id="lastname">
+        <fieldset>
+            <!-- <label for="first-name">Imie: </label> -->
+            <input type="text" name="first-name" id="first-name" placeholder="Imie" />
+        </fieldset>
 
-    <br>
-    <label for="street">Ulica:</label>
-    <input for="text" name="street" id="street">
+        <fieldset>
+            <!-- <label for="last-name">Nazwisko: </label> -->
+            <input type="text" name="last-name" id="last-name" placeholder="Nazwisko" />
+        </fieldset>
 
-    <br>
-    <label for="homenumber">Numer</label>
-    <input for="text" name="homenumber" id="homenumber">
+        <fieldset>
+            <!-- <label for="street">Ulica: </label> -->
+            <input class="streetAndNumber" type="text" name="street" id="street" placeholder="Ulica" />
 
-    <br>
-    <label for="town">Miasto</label>
-    <input for="text" name="town" id="town">
+            <!-- <label for="street-no">Numer: </label> -->
+            <input class="streetAndNumber" type="text" name="street-no" id="street-no" placeholder="Numer" />
+        </fieldset>
 
-    <br>
-    <label for="pizza">Pizza</label>
-    <select>
-        <option selected disabled value="0">Wybierz Pizze</option>
-            <option value="1">Calzone</option>
-            <option value="2">Pepperoni</option>
-            <option value="3">Hawajska</option>
-            <option value="4">Wegetariańska</option>
-          </select>
+        <fieldset>
 
-          <br>
-          <label for="souce"
-    
+            <input type="text" name="post-code" id="post-code" placeholder="Kod pocztowy" />
+
+
+            <input type="text" name="city" id="city" placeholder="Miasto" />
+        </fieldset>
+
+        <fieldset>
+            <label for="pizza">Pizza: </label>
+            <select name="pizza" id="pizza">
+                <option value="0">-- Wybierz Pizzę --</option>
+                <option value="1">Margherita</option>
+                <option value="2">Hawajska</option>
+                <option value="3">Peperoni</option>
+                <option value="4">Diabelska</option>
+                <option value="5">Wegetariańska</option>
+            </select>
+            <span id="price">0 PLN</span>
+        </fieldset>
+
+        <fieldset>
+            <input type="checkbox" id="tomato-sauce">
+            <label for="tomato-sauce">Sos pomidorowy</label>
+
+            <input type="checkbox" id="garlic-sauce">
+            <label for="garlic-sauce">Sos pomidorowy</label>
+        </fieldset>
+
+        <fieldset>
+            <input type="checkbox" id="agree">
+            <label for="agree">Zgoda na RODO itp.</label>
+        </fieldset>
+
+        <input type="submit" value="Zamów" id="button" />
+
+        <ul id="errors"></ul>
+
+    </form>
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+    <!-- Custom Scripts	-->
+    <script src="js/pizza-order.js"></script>
+
 </body>
+
 </html>
